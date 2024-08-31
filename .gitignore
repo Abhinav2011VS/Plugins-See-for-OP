@@ -1,7 +1,3 @@
 # Project exclude paths
 /.gradle/
 /.idea/
-
-#Project exclude files
-gradlew
-gradlew.bat
