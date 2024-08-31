@@ -1,0 +1,11 @@
+name: PluginsSeeforOP
+version: '1.0'
+main: net.abhinav.pso.PluginsSeeOP
+api-version: '1.21'
+authors: [ Abhinav VS ]
+description: Blocks /plugins command for non-OPs.
+commands:
+  plugins:
+    description: Shows the plugins on the server.
+  pl:
+    description: Alias for /plugins
