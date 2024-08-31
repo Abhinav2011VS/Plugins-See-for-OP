@@ -16,16 +16,13 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Cache Gradle packages
-        uses: actions/cache@v3
-        with:
-          path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
+      - name: List directory contents
+        run: dir
+        shell: cmd
 
       - name: Build with Gradle
-        run: gradlew.bat build
+        run: ./gradlew.bat build
+        shell: cmd
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
